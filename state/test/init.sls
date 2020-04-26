@@ -1,3 +1,3 @@
 test-echo:
   cmd.run:
-    - name: echo "TEST {{ grains['id'] }}" > /root/aaa
+    - name: echo "TEST {{ pillar['enax'] }}" > /root/aaa
