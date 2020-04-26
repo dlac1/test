@@ -1,3 +1,4 @@
+{% set ttt = salt['pillar.get']('enax', '') %}
 test-echo:
   cmd.run:
-    - name: echo "TEST: {{ pillar['enax'] }}" > /root/aaa
+    - name: echo "TEST: {{ ttt }}" > /root/aaa
