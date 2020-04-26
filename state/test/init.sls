@@ -1,8 +1,8 @@
-salt-call saltutil.refresh_pillar:
-  cmd.run
+#salt-call saltutil.refresh_pillar:
+#  cmd.run
 
-{% set ttatt = salt['pillar.get']('enax', '') %}
+#{% set ttatt = salt['pillar.get']('enax', '') %}
 
 test-echo:
   cmd.run:
-    - name: echo "TEST {{ ttatt }}" > /root/aaa
+    - name: echo "TEST {{ pillar['enax'] }}" > /root/aaa
