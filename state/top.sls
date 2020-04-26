@@ -1,4 +1,3 @@
 base:
   '*':
-    - common
     - test
