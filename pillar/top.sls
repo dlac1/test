@@ -1,4 +1,4 @@
 base:
   '*':
-    - test.{{ grains.id }}
+    - test
 
