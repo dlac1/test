@@ -1,8 +1,5 @@
-#salt-call saltutil.refresh_pillar:
-#  cmd.run
-
-#{% set ttatt = salt['pillar.get']('enax', '') %}
-
-test-echo:
-  cmd.run:
-    - name: echo "TEST {{ pillar['enax'] }}" > /root/aaa
+os-whitelist:
+  file.managed:
+    - name: /opt/os_whitelist.json
+    - mode: 600
+    - contents_pillar: {{ os_whitelist|json }}
